@@ -45,7 +45,7 @@ function generateMarkdown(data) {
   - [Contact-Info](#contact)
   - [Contributions](#contributions)
   - [Testing](#testing)
-  * ${renderLicenseLink(data.license)}
+  ${renderLicenseLink(data.license)}
 ## Description
 ${data.description}
 ## Installations
@@ -62,7 +62,7 @@ ${data.contributions}
 \`\`\`
 ${data.test}
 \`\`\`
-${renderLicenseSection(data.licesne)}
+${renderLicenseSection(data.license)}
 `;
 }
 

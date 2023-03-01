@@ -1,7 +1,7 @@
-# Opsies woopsies, no project name
+# README Generator
 ## Created By
    - Cory 
-   - MacaroniKetchup, 
+   - @MacaroniKetchup, 
    - ![Github license](https://img.sheilds.io/badge/license-MIT-yellowgreen.svg)
 ## Table of Contents
   - [Description](#description)
@@ -10,7 +10,7 @@
   - [Contact-Info](#contact)
   - [Contributions](#contributions)
   - [Testing](#testing)
-  * 
+  
 * [License](#license)
 
 ## Description
@@ -31,4 +31,4 @@ undefined
 ```
 ## License
 
-      licensed under the undefined license.
+      licensed under the MIT license.
