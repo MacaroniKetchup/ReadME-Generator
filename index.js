@@ -56,7 +56,7 @@ const questions = [
 // Asks for a list of any contributors in the project
 {
     type:'input',
-    name:'contibutions',
+    name:'contributions',
     message:'Please list any instructions on how contributions can be made to this project!',
 },
 // Asks for any tests written for this project and how to access them
@@ -80,7 +80,6 @@ const questions = [
 }
 ];
 
-// TODO: Create a function to write README file
 // Function to write the README file
 function writeToFile(fileName, data) {
     return fs.writeFileSync(path.join(process.cwd(), fileName), data, (err) => {
@@ -91,9 +90,6 @@ function writeToFile(fileName, data) {
     });
 }
 
-
-
-// TODO: Create a function to initialize app
 // Function that initializes the up
 function init() {
     inquirer.prompt(questions).then((responses) => {

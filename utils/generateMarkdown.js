@@ -1,14 +1,12 @@
-// TODO: Create a function that returns a license badge based on which license is passed in
 // Function that displays badge for which license is being used
 // If there is no license, return an empty string
 function renderLicenseBadge(license) {
   if (license !== "none") {
-    return `![Github license](https://img.sheilds.io/badge/license-${license}-yellowgreen.svg)`;
+    return `![Github license](https://img.shields.io/badge/license-${license}-yellowgreen.svg)`;
   }
   return '';
 }
 
-// TODO: Create a function that returns the license link
 // Function that displays the link to the licesne
 // If there is no license, return an empty string
 function renderLicenseLink(license) {
@@ -18,7 +16,6 @@ function renderLicenseLink(license) {
   return '';
 }
 
-// TODO: Create a function that returns the license section of README
 // Function that displays license section in the README
 // If there is no license, return an empty string
 function renderLicenseSection(license) {
@@ -30,14 +27,13 @@ function renderLicenseSection(license) {
   return '';
 }
 
-// TODO: Create a function to generate markdown for README
 // Template to generate markdown README
 function generateMarkdown(data) {
   return `# ${data.title}
 ## Created By
+   - ${renderLicenseBadge(data.license)}
    - ${data.name} 
    - @${data.username}, 
-   - ${renderLicenseBadge(data.license)}
 ## Table of Contents
   - [Description](#description)
   - [Installations](#installations)
@@ -52,7 +48,7 @@ ${data.description}
 ${data.installations}
 ## Usage
 ${data.usage}
-## Contibutors
+## Contributors
 ${data.contributions}
 ## Contact-Info
 - Name: ${data.name}
@@ -60,7 +56,7 @@ ${data.contributions}
 - Github: [${data.username}](https://github.com/${data.username}/)
 ## Testing
 \`\`\`
-${data.test}
+${data.tests}
 \`\`\`
 ${renderLicenseSection(data.license)}
 `;
