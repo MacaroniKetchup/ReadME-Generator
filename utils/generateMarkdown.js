@@ -13,7 +13,7 @@ function renderLicenseBadge(license) {
 // If there is no license, return an empty string
 function renderLicenseLink(license) {
   if (license !== 'none') {
-    return `\n* [license](#license)\n`;
+    return `\n* [License](#license)\n`;
   }
   return '';
 }
@@ -34,15 +34,18 @@ function renderLicenseSection(license) {
 // Template to generate markdown README
 function generateMarkdown(data) {
   return `# ${data.title}
-by ${data.name},${data.username}
+## Created By
+   - ${data.name} 
+   - @${data.username}, 
+   - ${renderLicenseBadge(data.license)}
 ## Table of Contents
-- [Description](#description)
-- [Installations](#installations)
-- [Usage](#usage)
-- [Contact-Info](#contact)
-- [Contributions](#contributions)
-- [Testing](#testing)
-- ${renderLicenseLink(data.license)}
+  - [Description](#description)
+  - [Installations](#installations)
+  - [Usage](#usage)
+  - [Contact-Info](#contact)
+  - [Contributions](#contributions)
+  - [Testing](#testing)
+  * ${renderLicenseLink(data.license)}
 ## Description
 ${data.description}
 ## Installations
@@ -54,11 +57,11 @@ ${data.contributions}
 ## Contact-Info
 - Name: ${data.name}
 - Email: ${data.email}
-- Github: ${data.username}(https://github.com/${data.username}/)
+- Github: [${data.username}](https://github.com/${data.username}/)
 ## Testing
-================================================================
+\`\`\`
 ${data.test}
-================================================================
+\`\`\`
 ${renderLicenseSection(data.licesne)}
 `;
 }

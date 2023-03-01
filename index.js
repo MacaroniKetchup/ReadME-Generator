@@ -70,13 +70,13 @@ const questions = [
     type:'list',
     name:'license',
     choices:['GNU AGPLv3', 'GNU GPLv3', 'GNU LGPLv3', 'Mozilla Public License 2.0', 'Apache License 2.0', 'MIT License', 'Boost Software License 1.0', 'The Unlicense'],
-    message:'Please choose a license for this project',
+    message:'Please choose a license for this project (Use the up and down keys to navigate, press enter to select)',
 },
 // Asks for an email for further contact
 {
     type: 'input',
     name: 'email',
-    message: 'Input your email so viewers may contact you for questions!',
+    message: 'Input your email so users may contact you for questions!',
 }
 ];
 
